@@ -1,0 +1,189 @@
+@import url(https://fonts.google.com/specimen/Inter);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ul, a {
+  list-style: none;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+}
+body {
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  color: hsl(236, 13%, 42%);
+  background-color: hsl(36, 100%, 99%);
+}
+.container {
+  padding: 2rem 1rem;
+  max-width: 700px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.logo {
+  width: 2.5rem;
+}
+.menu-button {
+  border: none;
+  cursor: pointer;
+}
+#nav-bar ul{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+a{
+  text-decoration: none;
+  color:hsl(236, 13%, 42%);
+}
+nav a:hover{
+  color: hsl(5, 85%, 63%) ;
+}
+main{
+  margin-bottom: 4rem;
+}
+h1{
+  font-size: 2.3rem;
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+}
+.news{
+  margin-bottom: 2em;
+  margin-top: 1em;
+}
+.button{
+  font-weight: 700;
+  letter-spacing: 5px;
+  color: hsl(36, 100%, 99%);
+  padding: 0.5rem 2rem;
+  background-color: hsl(5, 85%, 63%);
+}
+.button:hover {
+  color: hsl(36, 100%, 99%);
+  background-color: hsl(236, 13%, 42%);
+}
+.newsletter{
+  background-color: hsl(240, 100%, 5%);
+  font-weight: 400;
+  padding: 1rem 1.2rem ;
+  margin-top: 4em;
+}
+h2{
+  color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.headline{
+  color: hsl(36, 100%, 99%);
+  padding-bottom: 0.5rem;
+  font-weight: 800;
+}
+.info {
+  color: hsl(233, 8%, 79%);
+  font-weight: 800;
+}
+.newsletter a:hover{
+  color: hsl(35, 77%, 62%);
+}
+.news-container{
+  border-bottom: 1px solid  hsl(236, 13%, 42%);
+  padding-bottom: 1rem;
+  margin-bottom: 1em;
+}
+.extra-info{
+  display: grid;
+  grid-template-rows: auto;
+  gap: 1em;
+  margin-bottom: 3em;
+}
+.extra-info > div{
+  display: flex;
+  gap: 1rem;
+}
+.info-images{
+  width: 90px;
+}
+span {
+  margin-bottom: 0.75rem;
+  font-size: 36px;
+  color: hsl(233, 8%, 79%);
+  font-weight: 700;
+}
+.black-text{
+  font-weight: 800;
+  color: hsl(240, 100%, 5%);
+}
+.article a:hover{
+  color: hsl(5, 85%, 63%);
+}
+
+@media (min-width:768px){
+  .container{
+    margin: auto;
+    max-width: 1024px;
+    padding-top: 5rem;
+  }
+  header {
+    margin-bottom: 3rem;
+  }
+  .close-button{
+    display: none;
+  }
+  .menu-button{
+    display: none;
+  }
+  #nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: hsl(36, 100%, 99%);
+  }
+  main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: auto;
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+  }
+  .illustration-wrapper{
+    grid-column: 2/1;
+    grid-row:1/2 ;
+    width: 400px;
+  }
+  h1{
+    font-size: 3.5rem;
+    line-height: 52px;
+    grid-column: 1/1;
+    grid-row:2/2 ;
+  }
+  .button {
+    margin-bottom: 0;
+  }
+  .newsletter{
+    display: grid;
+    width: 327px;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 3;
+  }
+  .read-more{
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 3;
+  }
+  .extra-info {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    column-gap: 1.5em;
+  }
+  .info-images{
+    width: 100px;
+  }
+}
